@@ -63,7 +63,7 @@ export default function Toast({ onClose }: ToastProps) {
         flex items-center gap-3 px-4 py-3 rounded-xl
         glass-panel bg-slate-800/90 backdrop-blur-sm
         border shadow-lg shadow-black/20
-        min-w-75 max-w-100
+        min-w-70 max-w-70
         ${TYPE_COLORS[type]}
         ${isExiting
           ? 'animate-[slideOutRight_0.4s_ease-in_forwards]'

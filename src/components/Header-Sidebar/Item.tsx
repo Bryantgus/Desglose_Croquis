@@ -26,8 +26,8 @@ export default function Item({ title, description, icon, setActive, isActive }: 
   const openToast = useToastStore(s => s.openToast)
 
   const setActiveFnc = () => {
-    if (ordenId === 0 || title !== "Ordenes") {
-      openToast('Ninguna Orden Seleccionada para vizualizar ' + title.toLowerCase(), 'info')
+    if (ordenId === 0 && title !== 'Ordenes') {
+      openToast('Ninguna Orden Seleccionada para vizualizar ' + title.toUpperCase(), 'info')
       return
     }
     setActive(title.toLowerCase())
