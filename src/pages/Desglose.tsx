@@ -10,7 +10,7 @@ import DesgloseContent from "../components/Desglose/DesgloseContent";
 export default function Desglose() {
   const ordenId = useIdStore((s) => s.ordenId);
   const [showSetupManual, setShowSetupManual] = useState(false);
-  const { data: itemsPerPerfil, isLoading } = useItemOrdenes(Number(ordenId));
+  const { data: itemsPerPerfil, isLoading, isError } = useItemOrdenes(Number(ordenId));
   const perfilesDisponibles: TIPO_PERFIL[] = useMemo(() => {
     if (!itemsPerPerfil) return [];
     return Object.keys(itemsPerPerfil).filter(
@@ -42,6 +42,7 @@ export default function Desglose() {
 
   if (ordenId === 0) return <NoOrdenSelected />;
   if (isLoading) return <SpinLoading />;
+  if (isError) return <NoOrdenSelected />
 
   return (
     <div style={{ animation: "slideIn 0.7s cubic-bezier(0.4, 0, 0.2, 1)" }}>

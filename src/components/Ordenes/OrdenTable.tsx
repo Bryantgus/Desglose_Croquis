@@ -32,7 +32,7 @@ export default function OrdenTable({ toggleMode }: Props) {
           <div>Fecha</div>
           <div>Estado</div>
           <div>Acciones</div>
-        </div>s
+        </div>
       </div>
 
       <div className="overflow-y-auto sl:h-135 h-68 rounded-b-xl divide-y divide-slate-700/50 bg-[#192436]">
