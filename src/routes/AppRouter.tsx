@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import MainLayout from '../layout/MainLayout'
 import Ordenes from '../pages/Ordenes'
-import Croquis from '../pages/Croquis'
+// import Croquis from '../pages/Croquis'
 import Desglose from '../pages/Desglose'
 
 export default function AppRouter() {
@@ -14,7 +14,7 @@ export default function AppRouter() {
 
           <Route path={'ordenes'} element={<Ordenes />} />
           <Route path={'desglose'} element={<Desglose />} />
-          <Route path={'croquis'} element={<Croquis />} />
+          {/* <Route path={'croquis'} element={<Croquis />} /> */}
 
         </Route>
       </Routes>

@@ -1,4 +1,3 @@
-import Croquissvg from "../../assets/Croquissvg";
 import Desglosesvg from "../../assets/Desglosesvg";
 import Editsvg from "../../assets/Editsvg";
 import type { OrdenAction } from "../../types/Orden";
