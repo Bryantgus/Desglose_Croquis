@@ -5,6 +5,7 @@ import Item from "./Item";
 import { checkServerActive } from "../../services/checkServerActiveService";
 import SpinLoading from "../SpinLoading";
 import { useQuery } from '@tanstack/react-query';
+import { useToastStore } from "../../globalState/toast";
 
 interface ItemInfo {
   title: string;
@@ -27,14 +28,24 @@ export default function Sidebar() {
   const route = location.pathname.split('/')[1]
   const [moduleSelected, setModuleSelected] = useState(route)
   const navigate = useNavigate()
-
+  const openToast = useToastStore(s => s.openToast)
+  
   useEffect(() => {
     setModuleSelected(route)
   }, [route])
 
   const setActive = (module: string) => {
-    setModuleSelected(module)
-    navigate('/' + module.toLocaleLowerCase())
+
+    console.log(module, 'Mamageuvo');
+    
+    if (module === "croquis") {
+      openToast("Modulo en proceso", 'info')
+    } else { 
+      console.log("here");
+      
+      setModuleSelected(module)
+      navigate('/' + module.toLocaleLowerCase())
+    }
   }
 
   return (

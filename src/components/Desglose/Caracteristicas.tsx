@@ -139,7 +139,7 @@ export default function Caracteristicas({ sendFeatures, featuresP }: Props) {
               </div>
             ))}
 
-            {openPanel === 'vias' && [2, 3, 4, 5].map(via => (
+            {openPanel === 'vias' && [2, 3].map(via => (
               <div key={via}
                 onClick={() => setFeaturesFnc('vias', via)}
                 className={`flex items-center px-3 py-2.5 rounded-lg cursor-pointer transition-colors

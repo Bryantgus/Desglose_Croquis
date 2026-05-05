@@ -43,9 +43,7 @@ export default function OrdenItem({ id, cliente, fecha, estado, action }: OrdenA
           <button className="p-2 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer" onClick={() => selectedOption('desglose')} title="Desglose">
             <Desglosesvg />
           </button>
-          <button className="p-2 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer" onClick={() => selectedOption('croquis')} title="Croquis">
-            <Croquissvg />
-          </button>
+         
         </div>
       </div>
     </div >
