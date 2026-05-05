@@ -1,4 +1,9 @@
-import type { mockOrdenesType } from "../components/Ordenes/OrdenTable";
+type mockOrdenesType = {
+  id: number
+  cliente: string
+  fecha: string
+  estado: string
+}
 
 export const mockOrdenes: mockOrdenesType[] = [
   { id: 1, cliente: "Bryant Tejeda", fecha: "2026-02-20", estado: "Completado" },
